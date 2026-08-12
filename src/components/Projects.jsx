@@ -116,7 +116,7 @@ export default function Projects() {
               className={`btn btn-sm rounded-pill px-3 py-2 border-0 ${filter === 'backend' ? 'btn-primary-custom' : 'text-secondary'}`}
               onClick={() => setFilter('backend')}
             >
-              Backend / Blade
+              Backend
             </button>
           </div>
         </div>
