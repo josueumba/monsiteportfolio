@@ -35,10 +35,6 @@ export default function Hero() {
                 href="/cv-josue-umba.pdf"
                 download="CV_Josue_Umba.pdf"
                 className="btn btn-outline-custom"
-                onClick={(e) => {
-                  // Fallback message if PDF is a template demo
-                  alert("Téléchargement du CV de Josué Umba. Vous pouvez également le contacter directement par email (tembojosue@gmail.com).");
-                }}
               >
                 <Download size={18} />
                 <span>Télécharger mon CV</span>
