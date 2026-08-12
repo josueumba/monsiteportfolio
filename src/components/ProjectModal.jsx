@@ -16,7 +16,7 @@ export default function ProjectModal({ project, onClose }) {
             </div>
             <button type="button" className="btn-close btn-close-white" onClick={onClose} aria-label="Close"></button>
           </div>
-          
+
           <div className="modal-body">
             <div className="project-img-wrapper mb-4" style={{ maxHeight: '350px' }}>
               <img src={project.image} alt={project.title} className="img-fluid rounded-3 w-100 h-100 object-fit-cover" />
@@ -28,7 +28,7 @@ export default function ProjectModal({ project, onClose }) {
               <Layers className="text-primary" size={20} />
               <span>Fonctionnalités clés</span>
             </h4>
-            
+
             <div className="row g-2 mb-4">
               {project.features.map((feature, idx) => (
                 <div className="col-md-6" key={idx}>
@@ -71,13 +71,14 @@ export default function ProjectModal({ project, onClose }) {
                   <ExternalLink size={18} />
                 </a>
               ) : (
-                <button 
-                  className="btn btn-primary-custom"
-                  onClick={() => alert("Ce projet a été développé dans le cadre d'un stage/projet académique. La démonstration sur serveur privé est disponible sur demande.")}
-                >
-                  <span>Demander une démo</span>
-                  <ExternalLink size={18} />
-                </button>
+                <div></div>
+                // <button 
+                //   className="btn btn-primary-custom"
+                //   onClick={() => alert("Ce projet a été développé dans le cadre d'un stage/projet académique. La démonstration sur serveur privé est disponible sur demande.")}
+                // >
+                //   <span>Demander une démo</span>
+                //   <ExternalLink size={18} />
+                // </button>
               )}
             </div>
           </div>
