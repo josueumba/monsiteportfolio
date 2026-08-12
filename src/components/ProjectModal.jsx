@@ -65,20 +65,11 @@ export default function ProjectModal({ project, onClose }) {
                   <span>GitHub</span>
                 </a>
               )}
-              {project.demoUrl ? (
+              {project.demoUrl && (
                 <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary-custom">
-                  <span>Voir le projet</span>
+                  <span>Voir le site</span>
                   <ExternalLink size={18} />
                 </a>
-              ) : (
-                <div></div>
-                // <button 
-                //   className="btn btn-primary-custom"
-                //   onClick={() => alert("Ce projet a été développé dans le cadre d'un stage/projet académique. La démonstration sur serveur privé est disponible sur demande.")}
-                // >
-                //   <span>Demander une démo</span>
-                //   <ExternalLink size={18} />
-                // </button>
               )}
             </div>
           </div>

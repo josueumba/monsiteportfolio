@@ -9,6 +9,23 @@ export default function Projects() {
 
   const projectsData = [
     {
+      id: 'altimum',
+      title: 'Altimum Engineering DRC – Site Web d’Entreprise',
+      badge: 'Projet d\'Entreprise',
+      category: 'fullstack',
+      image: `${import.meta.env.BASE_URL}images/projects/altimum.png`,
+      description: 'Développement du site web de présentation de l’entreprise Altimum Engineering SARL. Plateforme professionnelle pour présenter les services, activités et projets.',
+      fullDescription: 'Développement du site web de présentation de l’entreprise Altimum Engineering SARL. Mise en place d’une plateforme professionnelle pour présenter les services, activités et projets de l’entreprise. Développement Frontend & Backend avec optimisation des performances web.',
+      tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Bootstrap 5', 'SEO', 'Performance Web'],
+      features: [
+        'Présentation professionnelle des services, activités et projets d’ingénierie',
+        'Développement Frontend & Backend sur mesure',
+        'Optimisation des performances web et de l’expérience utilisateur',
+      ],
+      github: null,
+      demoUrl: 'https://altimumengineeringdrc.com/',
+    },
+    {
       id: 'incidents',
       title: 'Signalement des Incidents Communautaires',
       badge: 'Travail de fin d\'étude de Licence',
@@ -157,7 +174,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="pt-3 border-top border-secondary border-opacity-10 d-flex align-items-center justify-content-between">
+                <div className="pt-3 border-top border-secondary border-opacity-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
                   <button
                     className="btn btn-outline-custom btn-sm"
                     onClick={() => setSelectedProject(project)}
@@ -166,17 +183,31 @@ export default function Projects() {
                     <span>Détails & Fonctionnalités</span>
                   </button>
 
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon-btn"
-                      title="Code source GitHub"
-                    >
-                      <GithubIcon size={18} />
-                    </a>
-                  )}
+                  <div className="d-flex align-items-center gap-2">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary-custom btn-sm py-1 px-3"
+                        title="Voir le site web"
+                      >
+                        <span>Voir le site</span>
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon-btn"
+                        title="Code source GitHub"
+                      >
+                        <GithubIcon size={18} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
