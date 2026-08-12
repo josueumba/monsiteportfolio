@@ -32,7 +32,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="/cv-josue-umba.pdf"
+                href={`${import.meta.env.BASE_URL}cv-josue-umba.pdf`}
                 download="CV_Josue_Umba.pdf"
                 className="btn btn-outline-custom"
               >
